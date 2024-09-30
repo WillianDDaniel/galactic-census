@@ -17,6 +17,7 @@ addEventListener('load', async () => {
 
 })
 
+
 async function getPlanets() {
     const url = 'https://swapi.dev/api/planets/?format=json'
     const planets = []

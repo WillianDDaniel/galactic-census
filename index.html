@@ -3,19 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/desafio-censo-galatico.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="./script.js"></script>
     <title>Desafio Censo Galático</title>
 </head>
 <body>
-    <header class="title-header">
-        <h1>Desafio Censo Galático</h1>
+    <header class="main-header">
+
+        <div class="header-nav-container">
+            <h1 class="header-title">Censo Galático</h1>
+        </div>
+
+        <div class="header-content">
+
+            <div class="header-text">
+                <p>
+                    Bem-vindos ao <span>Censo Galático!</span> <br>
+                    <span>Descubra os planetas do universo</span>
+                </p>
+
+                <span>Star Wars</span>. <br>
+
+                <p>Explore os planetas</p>
+                <button class="start-button">Vamos lá</button>
+            </div>
+
+            <div class="credits">
+                <p>@Image_by: <a href="https://pixabay.com/users/vlad_aivazovsky-25428763/">Vlad Aivazovsky</a></p>
+            </div>
+        </div>
     </header>
 
     <main>
         <section class="planets-container">
-            <h2>Planetas</h2>
+
+            <div class="planets-header">
+                <img src="./assets/img/planet-icon.png" alt="icone de planeta" class="planet-icon">
+                <h2>Planetas</h2>
+            </div>
+
             <div id="planets-buttons"></div>
+
         </section>
     </main>
 </body>
