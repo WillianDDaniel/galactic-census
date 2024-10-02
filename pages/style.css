@@ -1,0 +1,70 @@
+@import url(../assets/css/global.css);
+@import url(../assets/css/header.css);
+
+.header-nav-container a {
+    text-decoration: none;
+}
+
+.header-content {
+    background-color: var(--bg-black);
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.header-content h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    color: var(--yellow);
+}
+
+.header-content b {
+    color: var(--yellow);
+}
+
+.back-button {
+    position: absolute;
+    top: 35px;
+    left: 100px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.back-button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.back-button:hover {
+    transform: scale(1.05);
+}
+
+.back-button img {
+    width: 50px;
+    height: 50px;
+    transform: rotate(180deg);
+}
+
+.planet-info {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: #000;
+    padding: 20px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px 2px rgba(50, 50, 50, 0.3);
+}

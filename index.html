@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/img/desafio-censo-galatico.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js"></script>
     <title>Desafio Censo Galático</title>
 </head>
+
 <body>
     <header class="main-header">
 
@@ -26,17 +28,22 @@
                 <span>Star Wars</span>. <br>
 
                 <p>Explore os planetas</p>
-                <button class="start-button">Vamos lá</button>
+
+                <a href="#planets">
+                    <button class="start-button">
+                        Vamos lá
+                    </button>
+                </a>
             </div>
 
             <div class="credits">
-                <p>@Image_by: <a href="https://pixabay.com/users/vlad_aivazovsky-25428763/">Vlad Aivazovsky</a></p>
+                <p>Image_by: <a href="https://pixabay.com/users/vlad_aivazovsky-25428763/">@Vlad Aivazovsky</a></p>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="planets-container">
+        <section class="planets-container" id="planets">
 
             <div class="planets-header">
                 <img src="./assets/img/planet-icon.png" alt="icone de planeta" class="planet-icon">
@@ -47,5 +54,10 @@
 
         </section>
     </main>
+
+    <footer>
+
+    </footer>
 </body>
+
 </html>

@@ -50,7 +50,9 @@ function renderPlanetButtons(planets) {
             window.location.href = `./pages/index.html?planet=${id}&name=${planet.name}`
         })
 
-        container.appendChild(button)
+        if (planet.name !== 'unknown') {
+            container.appendChild(button)
+        }
     })
 }
 
