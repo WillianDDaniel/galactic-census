@@ -78,11 +78,16 @@ function initializeHeaderLink() {
         }
     })
 
-    if (isLocalhost) {
-        backButton.href = '/#planets'
-    } else {
-        backButton.href = '/galactic-census/#planets'
-    }
+    backButton.addEventListener('click', () => {
+
+        backButton.removeAttribute('href')
+
+        if (isLocalhost) {
+            window.location.href = '/#planets'
+        } else {
+            window.location.href = '/galactic-census/#planets'
+        }
+    })
 }
 
 initializeHeaderLink()

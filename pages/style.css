@@ -1,10 +1,6 @@
 @import url(../assets/css/global.css);
 @import url(../assets/css/header.css);
 
-.header-nav-container a {
-    text-decoration: none;
-}
-
 .header-title {
     cursor: pointer;
 }
@@ -50,7 +46,7 @@
 }
 
 .back-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .back-button img {
