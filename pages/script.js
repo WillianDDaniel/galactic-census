@@ -62,3 +62,21 @@ async function translateText(texts) {
     const data = await response.json()
     return data.translatedTexts
 }
+
+function initializeHeaderLink() {
+
+    const headerLink = document.getElementById('header-link')
+
+    headerLink.addEventListener('click', () => {
+
+        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
+        if (isLocalhost) {
+            window.location.href = '/'
+        } else {
+            window.location.href = '/galactic-census/'
+        }
+    })
+}
+
+initializeHeaderLink()
