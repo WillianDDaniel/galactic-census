@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/img/desafio-censo-galatico.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
     <script src="./assets/js/script.js"></script>
     <title>Censo Galático - Planetas de Star Wars</title>
 </head>
@@ -54,10 +55,8 @@
                 <div class="search-container">
                     <label class="search-label" for="search">Pesquisar planeta: </label>
 
-                    <input class="search-input" type="search"
-                        placeholder="Nome do planeta..."
-                        id="search-input" autocomplete="off"
-                    >
+                    <input class="search-input" type="search" placeholder="Nome do planeta..." id="search-input"
+                        autocomplete="off">
                     <div id="suggestions-container" class="autocomplete-suggestions"></div>
                     <button class="find-planet-btn" id="find-planet-btn">Buscar</button>
                 </div>
@@ -71,7 +70,20 @@
     </main>
 
     <footer>
+        <div>
+            <p>Contéudo obtído através da API:</p>
+            <a href="https://swapi.dev/" target="_blank">
+                => SWAPI The Star Wars API
+            </a>
+        </div>
 
+        <div>
+            <p>Desafio Censo Galático - 2024</p>
+
+            <a href="https://willianddaniel.github.io/portfolio/" target="_blank">
+                => Feito por @WillianDDaniel
+            </a>
+        </div>
     </footer>
 </body>
 <script src="./assets/js/search.js" defer></script>

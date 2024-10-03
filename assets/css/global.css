@@ -31,3 +31,27 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+    height: 12px; /* Altura da barra de rolagem horizontal */
+    background-color: rgb(27, 27, 27); /* Cor do fundo da barra de rolagem */
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background-color: var(--bg-black); /* Cor do fundo da barra */
+    border-radius: 10px; /* Arredondamento das bordas do fundo */
+}
+
+/* Cor do "polegar" da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: rgb(39, 39, 39); /* Cor do polegar */
+    border-radius: 10px; /* Arredondamento do polegar */
+}
+
+/* Cor do polegar ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(49, 49, 49); /* Cor mais escura ao passar o mouse */
+}
