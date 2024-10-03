@@ -25,7 +25,11 @@ function getLocalPlanet(planetName) {
 
     const localPlanets = JSON.parse(localStorage.getItem('planets'))
 
-    return localPlanets.find(planet => planet.name === planetName)
+    try {
+        return localPlanets.find(planet => planet.name === planetName)
+    } catch (error) {
+        return null
+    }
 }
 
 async function renderPlanetInfo(planet) {
