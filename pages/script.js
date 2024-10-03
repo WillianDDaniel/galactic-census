@@ -11,8 +11,8 @@ addEventListener('load', async () => {
     const planet = getLocalPlanet(name) || await getPlanet(id)
 
     renderPlanetInfo(planet)
+    findResidents(planet.residents)
 })
-
 
 async function getPlanet(id) {
     const url = `https://swapi.dev/api/planets/${id}/?format=json`
@@ -27,7 +27,6 @@ function getLocalPlanet(planetName) {
 
     return localPlanets.find(planet => planet.name === planetName)
 }
-
 
 async function renderPlanetInfo(planet) {
 
@@ -61,6 +60,57 @@ async function translateText(texts) {
 
     const data = await response.json()
     return data.translatedTexts
+}
+
+function findResidents(residentsUrls) {
+
+    if (residentsUrls.length === 0) {
+        const residentsContainer = document.getElementById('residents-container')
+
+        residentsContainer.innerHTML += '<p>Nenhum cidadão famoso para monstrar</p>'
+
+        return
+    }
+
+    document.getElementById('table-legend').style.display = 'flex'
+
+    renderTable(residentsUrls)
+}
+
+function renderTable(residentsUrls) {
+    const tableBody = document.getElementById('residents-table-body')
+
+    residentsUrls.forEach(async (residentUrl) => {
+
+        const resident = await getResident(residentUrl)
+
+        const row = document.createElement('tr')
+
+        const nameCell = document.createElement('td')
+        nameCell.textContent = resident.name
+
+        const birth = resident.birth_year !== 'unknown' ? resident.birth_year : 'Desconhecido'
+        const birthYearCell = document.createElement('td')
+        birthYearCell.textContent = birth
+
+        row.appendChild(nameCell);
+        row.appendChild(birthYearCell)
+
+        tableBody.appendChild(row)
+    })
+
+    document.getElementById('residents-table').style.display = 'block'
+}
+
+async function getResident(url) {
+    const resident = await fetch(url)
+
+    if (!resident.ok) {
+        throw new Error('Resident not found')
+    }
+
+    const data = await resident.json()
+    return data
 }
 
 function initializeHeaderLink() {

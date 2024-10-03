@@ -1,5 +1,6 @@
 @import url(../assets/css/global.css);
 @import url(../assets/css/header.css);
+@import url(table.css);
 
 .header-title {
     cursor: pointer;
@@ -12,6 +13,7 @@
     align-items: center;
     justify-content: flex-start;
     position: relative;
+    height: auto;
 }
 
 .header-content h2 {
@@ -73,4 +75,22 @@
     width: 50px;
     height: 50px;
     margin: 5px;
+}
+
+.residents-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.residents-container h3 {
+    font-size: 1.5rem;
+    color: var(--yellow);
+    margin-bottom: 20px;
+    background-color: var(--bg-black);
+    padding: 2px 10px;
+    border-radius: 5px;
+    box-shadow: var(--box-shdw-light);
 }
