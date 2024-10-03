@@ -64,12 +64,12 @@ async function translateText(texts) {
 }
 
 function initializeHeaderLink() {
-
     const headerLink = document.getElementById('header-link')
+    const backButton = document.getElementById('back-button')
+
+    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
     headerLink.addEventListener('click', () => {
-
-        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
         if (isLocalhost) {
             window.location.href = '/'
@@ -77,6 +77,12 @@ function initializeHeaderLink() {
             window.location.href = '/galactic-census/'
         }
     })
+
+    if (isLocalhost) {
+        backButton.href = '/#planets'
+    } else {
+        backButton.href = '/galactic-census/#planets'
+    }
 }
 
 initializeHeaderLink()

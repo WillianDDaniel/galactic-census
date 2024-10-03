@@ -5,6 +5,10 @@
     text-decoration: none;
 }
 
+.header-title {
+    cursor: pointer;
+}
+
 .header-content {
     background-color: var(--bg-black);
     margin: 20px;
