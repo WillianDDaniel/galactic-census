@@ -1,3 +1,6 @@
+let planetsNames = []
+let planetIds = {}
+
 addEventListener('load', async () => {
     localPlanets = JSON.parse(localStorage.getItem('planets'))
 
@@ -5,6 +8,10 @@ addEventListener('load', async () => {
 
     planets.forEach(planet => {
         console.log(planet.name)
+
+        planetsNames.push(planet.name)
+
+        planetIds[planet.name] = planet.url.split('/').filter(Number).pop()
     })
 
     renderPlanetButtons(planets)
@@ -38,6 +45,8 @@ async function getPlanets() {
 
 function renderPlanetButtons(planets) {
     const container = document.getElementById('planets-buttons')
+
+    container.innerHTML = ''
 
     planets.forEach(planet => {
         const button = document.createElement('button')

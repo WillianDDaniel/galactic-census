@@ -2,6 +2,8 @@ addEventListener('load', async () => {
     const id = new URLSearchParams(window.location.search).get('planet')
     const name = new URLSearchParams(window.location.search).get('name')
 
+    document.getElementById('page-title').innerHTML = `Planeta ${name} | Censo Galáctico`
+
     if (!id || !name) {
         window.location.href = '/#planets'
     }
@@ -31,33 +33,32 @@ async function renderPlanetInfo(planet) {
 
     document.getElementById('planet-name').innerHTML = `Planeta ${planet.name}`
 
-    const climate = await translateText(planet.climate)
-    const terrain = await translateText(planet.terrain)
+    const [climate, terrain] = await translateText([planet.climate, planet.terrain])
 
     const population = planet.population !== 'unknown' ? planet.population : "desconhecido"
 
-    console.log(climate, terrain, population)
+    document.getElementById('loading-gif').style.display = 'none'
 
     document.getElementById('climate').innerHTML = `<b>Clima</b>: ${climate}`
     document.getElementById('terrain').innerHTML = `<b>Terreno</b>: ${terrain}`
     document.getElementById('population').innerHTML = `<b>População</b>: ${population}`
 }
 
-async function translateText(text) {
+async function translateText(texts) {
     const url = 'https://words-translate-willian-daniel.netlify.app/translate';
     const response = await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ text: text, target: 'pt' })
+        body: JSON.stringify({ texts: texts, target: 'pt' })
     });
 
     if (!response.ok) {
         const errorData = await response.json();
-        throw new Error('Translation error: ' + errorData.message);
+        throw new Error('Translation error: ' + errorData.message)
     }
 
-    const data = await response.json();
-    return data.translatedText;
+    const data = await response.json()
+    return data.translatedTexts
 }

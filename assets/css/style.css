@@ -1,5 +1,6 @@
 @import url(global.css);
 @import url(header.css);
+@import url(search.css);
 
 main {
     display: flex;
@@ -11,13 +12,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.planets-header {
-    display: flex;
-    align-items: center;
-    align-self: flex-start;
-    margin-left: 80px;
 }
 
 .planets-header h2 {
@@ -46,7 +40,7 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 2px 2px 6px 2px rgba(255, 255, 255, 0.15);
+    box-shadow: var(--box-shdw-light);
     background-color: var(--yellow);
     color: #000000;
     font-weight: 900;
@@ -66,4 +60,25 @@ footer {
     font-size: 0.8rem;
     font-weight: 600;
     margin-top: 50px;
+}
+
+.planets-header {
+    width: 87%;
+    min-width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.planet-icon-container {
+    display: flex;
+    align-items: center;
+}
+
+#loading-gif {
+    margin-top: 25px;
+    background-color: var(--bg-black);
+    padding: 25px 65%;
+    border-radius: 5px;
 }

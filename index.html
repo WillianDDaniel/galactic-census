@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="./assets/img/desafio-censo-galatico.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/script.js"></script>
-    <title>Desafio Censo Galático</title>
+    <title>Censo Galático - Planetas de Star Wars</title>
 </head>
 
 <body>
@@ -46,11 +46,26 @@
         <section class="planets-container" id="planets">
 
             <div class="planets-header">
-                <img src="./assets/img/planet-icon.png" alt="icone de planeta" class="planet-icon">
-                <h2>Planetas</h2>
+                <div class="planet-icon-container">
+                    <img src="./assets/img/planet-icon.png" alt="icone de planeta" class="planet-icon">
+                    <h2>Planetas</h2>
+                </div>
+
+                <div class="search-container">
+                    <label class="search-label" for="search">Pesquisar planeta: </label>
+
+                    <input class="search-input" type="search"
+                        placeholder="Nome do planeta..."
+                        id="search-input" autocomplete="off"
+                    >
+                    <div id="suggestions-container" class="autocomplete-suggestions"></div>
+                    <button class="find-planet-btn" id="find-planet-btn">Buscar</button>
+                </div>
             </div>
 
-            <div id="planets-buttons"></div>
+            <div id="planets-buttons">
+                <img src="./assets/img/loading-gif.gif" alt="loading-gif">
+            </div>
 
         </section>
     </main>
@@ -59,5 +74,6 @@
 
     </footer>
 </body>
+<script src="./assets/js/search.js" defer></script>
 
 </html>

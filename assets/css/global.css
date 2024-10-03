@@ -3,6 +3,7 @@
 :root {
     --yellow: rgb(255, 217, 0);
     --bg-black: rgba(0, 0, 0, 0.5);
+    --box-shdw-light: 2px 2px 6px 2px rgba(255, 255, 255, 0.15);
 }
 
 @font-face {
