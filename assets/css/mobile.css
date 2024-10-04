@@ -1,0 +1,135 @@
+@media screen and (max-width: 840px) {
+    .header-nav-container {
+        justify-content: center;
+    }
+
+    .header-title {
+        text-align: center;
+        margin: 5px;
+        padding: 0 5px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-content div {
+        width: 100%;
+    }
+
+    .header-text p:first-of-type {
+        font-size: 1.75rem;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .header-text p span:last-of-type {
+        font-size: 1.5rem;
+    }
+
+    .header-text > span:last-of-type {
+        font-size: 3rem;
+    }
+
+    .credits {
+        display: none;
+    }
+
+    .planets-container {
+        align-items: center;
+    }
+
+    .planets-header {
+        flex-direction: column;
+    }
+
+    .search-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 5px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 720px) {
+    .header-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .header-text p:first-of-type {
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 0 7%;
+    }
+
+    .header-text p span:last-of-type {
+        font-size: 1.3rem;
+    }
+
+    .header-text > span:last-of-type {
+        font-size: 1.9rem;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        height: auto;
+        text-align: center;
+    }
+
+    footer div {
+        width: 100%;
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .header-title {
+        font-size: 1.2rem;
+    }
+
+    .start-button {
+        padding: 7px 15px;
+    }
+
+    .header-text p:last-of-type {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .header-text > span:last-of-type {
+        font-size: 1.60rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .planet-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .planets-header h2 {
+        font-size: 1.4rem;
+        padding: 2px 7px;
+    }
+
+    .search-container {
+        padding: 10px 0;
+    }
+
+    .search-label {
+        text-align: center;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+}

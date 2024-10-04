@@ -19,6 +19,10 @@ Bem-vindo ao **Censo Galático**, uma aplicação que permite visualizar informa
 - **LocalStorage**: Armazenamento local de planetas.
 - **Fetch API**: Requisições assíncronas à API.
 
+## Screenshot
+
+![Front-End-Home](./screenshots/home-header.png)
+
 ## Como Usar
 
 1. Clone este repositório:

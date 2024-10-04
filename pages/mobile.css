@@ -1,0 +1,104 @@
+@media screen and (max-width: 720px) {
+    .header-nav-container {
+        justify-content: center;
+    }
+
+    .header-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .back-button {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+        left: 50px;
+    }
+
+    .back-button img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .back-button button {
+        background-color: transparent;
+    }
+
+    .header-content div {
+        width: 80%;
+    }
+
+    .residents-container h3 {
+        width: 90%;
+        text-align: center;
+        padding: 2px 5px;
+    }
+
+    #planet-name {
+        margin-left: 15px;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    .back-button {
+        position: static;
+        font-size: 1.3rem;
+        background-color: var(--bg-black);
+        padding: 0px 10px;
+        margin-top: -10px;
+        border-radius: 5px;
+    }
+
+    #planet-name {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    footer {
+        flex-wrap: wrap;
+        height: auto;
+        text-align: center;
+    }
+
+    footer div {
+        width: 100%;
+        margin: 15px;
+    }
+
+    .residents-container h3 {
+        font-size: 1.3rem;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+    #residents-table thead th {
+        white-space: wrap;
+    }
+
+    .residents-container h3 {
+        font-size: 1.15rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    #planet-name {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .residents-container h3 {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 240px) {
+    .header-title {
+        font-size: 1.2rem;
+    }
+}

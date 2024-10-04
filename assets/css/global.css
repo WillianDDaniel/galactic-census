@@ -30,6 +30,7 @@ body {
     background-image: url(../img/stars-wars-wallpaper.webp);
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 ::-webkit-scrollbar {

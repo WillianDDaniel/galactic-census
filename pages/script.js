@@ -71,7 +71,7 @@ function findResidents(residentsUrls) {
     if (residentsUrls.length === 0) {
         const residentsContainer = document.getElementById('residents-container')
 
-        residentsContainer.innerHTML += '<p>Nenhum cidadão famoso para monstrar</p>'
+        residentsContainer.innerHTML += '<p>Nenhum cidadão famoso para mostrar</p>'
 
         return
     }
