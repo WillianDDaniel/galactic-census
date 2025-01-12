@@ -15,7 +15,7 @@ addEventListener('load', async () => {
 })
 
 async function getPlanet(id) {
-    const url = `https://swapi.dev/api/planets/${id}/?format=json`
+    const url = `https://swapi.py4e.com/api/planets/${id}/?format=json`
     const response = await fetch(url)
     const data = await response.json()
     return data

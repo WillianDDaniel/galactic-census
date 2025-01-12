@@ -20,7 +20,7 @@ addEventListener('load', async () => {
 
 
 async function getPlanets() {
-    const url = 'https://swapi.dev/api/planets/?format=json'
+    const url = 'https://swapi.py4e.com/api/planets/?format=json'
     const planets = []
 
     const response = await fetch(url)
